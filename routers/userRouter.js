@@ -124,7 +124,7 @@ userRouter.post('/login', async (req,res) => {
     if (!passwordLogin) res.status(400).send('Password incorrect');
 
     const token = jwt.sign({ _id: userLogin._id}, 'chuoibimat');
-    res.header('auth-token', token).send('ban da dang nhap thanh cong') 
+    res.header('auth-token', token).send(token); 
 });
 
 function registerValidate(data) {
