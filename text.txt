@@ -1,0 +1,13 @@
+hoangcu94
+1234namsau
+
+
+
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://hoangcu94:<password>@cluster0.gu4jo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
